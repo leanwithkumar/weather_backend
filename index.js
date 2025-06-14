@@ -6,7 +6,7 @@ const app = express();
 
 app.use(cors())
 
-app.get("/weather", async (req, res)=>{
+app.get("/", async (req, res)=>{
     const city = req.query.city;
     if(!city){
         return res.status(400).json({message : "no city name recived"})
